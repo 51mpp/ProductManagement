@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="2025-05-20" ReportInfo.Modified="05/22/2025 19:22:44" ReportInfo.CreatorVersion="2025.2.0.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="StockChange" ReferenceName="StockChange" DataType="System.Int32" Enabled="true">
+      <Column Name="ProductCode" DataType="System.String"/>
+      <Column Name="ProductName" DataType="System.String"/>
+      <Column Name="Unit" DataType="System.String"/>
+      <Column Name="Quantity" DataType="System.Int32"/>
+      <Column Name="StockChangeDate" DataType="System.DateTime"/>
+      <Column Name="Note" DataType="System.String"/>
+      <Column Name="TransactionType" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text1" Width="718.2" Height="37.8" Text="รายละเอียดรับเข้าจ่ายออก" HorzAlign="Center" VertAlign="Center" Font="Arial, 16pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="Header1" Width="80" Height="28.35" Border.Lines="All" Text="รหัสสินค้า" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Header2" Left="80" Width="120" Height="28.35" Border.Lines="All" Text="ชื่อสินค้า" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Header3" Left="200" Width="80" Height="28.35" Border.Lines="All" Text="จำนวน" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Header4" Left="280" Width="60" Height="28.35" Border.Lines="All" Text="หน่วย" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Header5" Left="340" Width="120" Height="28.35" Border.Lines="All" Text="วันล่าสุดที่อัปเดท" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Header6" Left="460" Width="100" Height="28.35" Border.Lines="All" Text="เข้า/ออก" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Header7" Left="560" Width="158.2" Height="28.35" Border.Lines="All" Text="หมายเหตุ" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="28.35" CanGrow="true" DataSource="StockChange">
+      <TextObject Name="Data1_ProductCode" Width="80" Height="28.35" Border.Lines="All" GrowToBottom="true" Text="[StockChange.ProductCode]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Data1_ProductName" Left="80" Width="120" Height="28.35" Border.Lines="All" GrowToBottom="true" Text="[StockChange.ProductName]" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Data1_Quantity" Left="200" Width="80" Height="28.35" Border.Lines="All" GrowToBottom="true" Text="[StockChange.Quantity]" HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Data1_Unit" Left="280" Width="60" Height="28.35" Border.Lines="All" GrowToBottom="true" Text="[StockChange.Unit]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Data1_StockChangeDate" Left="340" Width="120" Height="28.35" Border.Lines="All" GrowToBottom="true" Text="[StockChange.StockChangeDate]" Format="Date" Format.Format="f" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Data1_TransactionType" Left="460" Width="100" Height="28.35" Border.Lines="All" GrowToBottom="true" Text="[StockChange.TransactionType]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Data1_Note" Left="560" Width="158.2" Height="28.35" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[StockChange.Note]" VertAlign="Center" Font="Arial, 10pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>
